@@ -1,0 +1,123 @@
+tap "felixkratz/formulae"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "koekeishiya/formulae"
+tap "neovim/neovim"
+tap "wez/wezterm"
+# Search tool like grep, but optimized for programmers
+brew "ack"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
+# Cross-platform make
+brew "cmake"
+# Modern replacement for 'ls'
+brew "exa"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Command-line tools for fly.io services
+brew "flyctl"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Distributed revision control system
+brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# International domain name library (IDNA2008, Punycode and TR46)
+brew "libidn2"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# GNU Ubiquitous Intelligent Language for Extensions
+brew "guile"
+# Add GitHub support to git on the command-line
+brew "hub"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Parser generator tool and incremental parsing library
+brew "tree-sitter"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim", args: ["HEAD"]
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
+# Reattach process (e.g., tmux) to background
+brew "reattach-to-user-namespace"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Command-line integration for Teensy USB development boards
+brew "teensy_loader_cli"
+# Code-search similar to ack
+brew "the_silver_searcher"
+# Text interface for Git repositories
+brew "tig"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Internet file retriever
+brew "wget"
+# Tracks most-used directories to make cd smarter
+brew "z"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Custom macOS statusbar with shell plugin, interaction and graph support
+brew "felixkratz/formulae/sketchybar"
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Chromium based browser
+cask "arc"
+# Records audio from any application
+cask "audio-hijack"
+# Virtual Audio Driver
+cask "blackhole-2ch"
+# Audio playback
+cask "farrago"
+# Audio editor
+cask "fission"
+# Developer targeted fonts with a high number of glyphs
+cask "font-inconsolata-go-nerd-font"
+# Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
+cask "font-iosevka"
+# Developer targeted fonts with a high number of glyphs
+cask "font-iosevka-nerd-font"
+# Developer targeted fonts with a high number of glyphs
+cask "font-jetbrains-mono-nerd-font"
+# Monospaced font from Evil Martians
+cask "font-martian-mono"
+# Font with a mechanical skeleton and the forms are largely geometric
+cask "font-roboto"
+# GPU-based terminal emulator
+cask "kitty"
+# Cable-free audio router
+cask "loopback"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Integrated development environment focused entirely on AppleScript
+cask "script-debugger"
+# Instant messaging application focusing on security
+cask "signal"
+# View Spaces / Virtual Desktops in the menu bar
+cask "spaceman"
+# To-do list
+cask "todoist"
+# Multimedia player
+cask "vlc"
+# A GPU-accelerated cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust
+cask "wezterm-nightly"
+# Video communication and virtual meeting platform
+cask "zoom"
