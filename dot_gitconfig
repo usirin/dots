@@ -1,0 +1,88 @@
+[user]
+	name = usirin
+	email = umutsirin1@gmail.com
+
+[alias]
+  st = status --untracked-files
+  ci = commit
+  cian = commit --amend --no-edit
+  co = checkout
+  cp = cherry-pick
+  cpc = cherry-pick --continue
+  cpa = cherry-pick --abort
+  di = diff
+  aa = add --all
+  b  = branch -vv
+  bd = branch -D
+  logo = log --decorate --oneline
+  logf = log --graph --oneline
+  rc = rebase --continue
+  ra = rebase --abort
+  ri = rebase --interactive
+  p = pull --rebase
+  g = grep --break --heading --line-number
+  url =! bash -c 'git config --get remote.origin.url | sed -E "s/git@\\(.+\\)\\:\\(.+\\)\\.git$/https:\\\\/\\\\/\\\\1\\\\/\\\\2/g"'
+  open =! bash -c 'git url | xargs open'
+  ignore = update-index --assume-unchanged
+  unignore = update-index --no-assume-unchanged
+  ignored =! git ls-files -v | grep ^[a-z]
+  prom = pull --rebase origin master
+  pom = push origin master
+  undo = reset HEAD~1
+  wip =! bash -c 'git add --all && git commit -m wip --no-verify'
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+
+[core]
+  editor = "NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
+	excludesfile = /Users/ussirin/.gitignore
+	; pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  side-by-side = true
+  ; plus-color = "#012800"
+  ; minus-color = "#340001"
+  syntax-theme = OneHalfDark
+
+[github]
+  user = usirin
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[mergetool]
+	keepBackup = true
+[push]
+	default = simple
+; [commit]
+; 	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
+[rebase]
+	autostash = true
+[credential]
+  helper = store
+; 	helper = !aws codecommit credential-helper $@
+; 	UseHttpPath = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	gpgsign = false
+[init]
+	defaultBranch = main
+
+; [url "ssh://git@github.com/"]
+; 	insteadOf = https://github.com/
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[checkout]
+	defaultRemote = origin
