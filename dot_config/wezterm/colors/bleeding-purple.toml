@@ -1,0 +1,34 @@
+[colors]
+ansi = [
+  "#1f1f23",
+  "#bb1411",
+  "#00ad96",
+  "#ffd37a",
+  "#1f69ff",
+  "#9147ff",
+  "#018383",
+  "#d3d3d9",
+]
+background = "#18181b"
+brights = [
+  "#26262c",
+  "#e91916",
+  "#00f593",
+  "#ffe4ad",
+  "#528bff",
+  "#a970ff",
+  "#00a3a3",
+  "#efeff1",
+]
+cursor_bg = "#cccccc"
+cursor_border = "#9147ff"
+cursor_fg = "#111111"
+foreground = "#adadb8"
+selection_bg = "#ffe4ad"
+selection_fg = "#111111"
+split = "#333334"
+
+[colors.indexed]
+
+[metadata]
+name = 'bleeding-purple'
