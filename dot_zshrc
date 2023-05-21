@@ -1,3 +1,4 @@
+# vi: ft=zsh
 export DOTFILES=$HOME/dotfiles
 
 source $HOME/antigen.zsh
