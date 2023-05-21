@@ -1,6 +1,6 @@
-source $HOME/antigen.zsh
-
 export DOTFILES=$HOME/dotfiles
+
+source $HOME/antigen.zsh
 
 antigen init $HOME/.antigenrc
 
