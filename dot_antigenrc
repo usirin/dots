@@ -17,8 +17,9 @@ antigen bundle zsh-users/zsh-completions
 
 # antigen bundle g-plane/zsh-yarn-autocompletions
 
-antigen bundle $DOTFILES/zsh
+antigen bundle ~/.config/zsh
 
-antigen theme $DOTFILES/zsh themes/usirin
+# antigen theme $DOTFILES/zsh themes/usirin
+antigen theme ~/.config/zsh themes/usirin
 
 antigen apply
