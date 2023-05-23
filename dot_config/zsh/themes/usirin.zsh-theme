@@ -49,14 +49,6 @@ _fishy_collapsed_wd() {
     ')
 }
 
-# time
-function real_time() {
-    local color="%{$fg[blue]%}"
-    local time="[$(date +%H:%M:%S)]";
-    local color_reset="%{$reset_color%}";
-    echo "${color}${time}${color_reset}";
-}
-
 local ret_git_dirty="${prompt_git_dirty_color}${prompt_git_dirty}"
 local ret_git_clean="${prompt_git_clean_color}${prompt_git_clean}"
 local ret_prompt="${prompt_prompt_color}${prompt_prompt}"
@@ -67,11 +59,10 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%} ${ret_git_dirty}%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%} ${ret_git_clean}%{$reset_color%}"
 
-local _usirin_prompt="${prompt_pwd_color}$(_fishy_collapsed_wd)$(git_prompt_info)% %{$reset_color%}${new_line}${ret_prompt}%{$reset_color%}"
+local _usirin_prompt='${prompt_pwd_color}$(_fishy_collapsed_wd)$(git_prompt_info)% %{$reset_color%}${new_line}${ret_prompt}%{$reset_color%}'
 
 if [ "$SSH_CONNECTION" ]; then
     _usirin_prompt="${prompt_prompt_color}$(hostname):${_usirin_prompt}"
 fi
 
-PROMPT="${_usirin_prompt}"
-RPROMPT="$(real_time)"
+PROMPT=$_usirin_prompt
