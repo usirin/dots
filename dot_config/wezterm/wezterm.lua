@@ -17,11 +17,23 @@ return {
     brightness = 1,
   },
   default_cursor_style = "SteadyBar",
-  font_size = 19,
+  font = wezterm.font_with_fallback({
+    -- "Pragmasevka Nerd Font",
+    -- "Martian Mono Cn Lt",
+    -- "Iosevka Nerd Font",
+    -- "Martian Mono Nr Lt",
+    "JetBrainsMono Nerd Font",
+  }),
+  font_size = 20,
+  -- line_height = 1.10,
   harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
   leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 },
   keys = {
-    { key = "|", mods = "LEADER", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }), },
+    {
+      key = "|",
+      mods = "LEADER",
+      action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+    },
     {
       key = "-",
       mods = "LEADER",
